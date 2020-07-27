@@ -1,0 +1,4 @@
+Date: Proto
+BasedOnStyle: Google
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true

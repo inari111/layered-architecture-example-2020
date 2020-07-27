@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package core;
+
+option go_package = "pb_core";
+
+message Date {
+  uint32 year  = 1;
+  uint32 month = 2;
+  uint32 day   = 3;
+}

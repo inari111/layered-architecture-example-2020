@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "pb_api";
+
+import "core/time.proto";
+import "api/task.proto";
+
+service TaskService {
+  rpc Create(TaskCreateRequest) returns (TaskCreateResponse);
+}
+
+message TaskCreateRequest {
+  string title       = 1;
+  string description = 2;
+  core.Date due_date = 3;
+  Status status = 4;
+}
+
+message TaskCreateResponse {}

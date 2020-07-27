@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "pb_api";
+
+import "google/protobuf/timestamp.proto";
+
+message Task {
+  string                    title       = 1;
+  string                    description = 2;
+  google.protobuf.Timestamp due_date    = 100;
+}
+
+enum Status {
+  INITIALIZED = 0;
+  ICEBOX      = 1;
+  BACKLOG     = 2;
+  INPROGRESS  = 3;
+  DONE        = 4;
+  DELETED     = 5;
+}
